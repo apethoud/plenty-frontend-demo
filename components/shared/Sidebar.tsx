@@ -18,8 +18,11 @@ export default function Sidebar() {
   return (
     <nav
       aria-label="Main navigation"
-      className="flex w-56 shrink-0 flex-col overflow-y-auto bg-brand-900 py-6 sticky top-0 h-dvh"
+      className="flex w-56 shrink-0 flex-col overflow-y-auto bg-brand-900 py-4 sticky top-0 h-dvh"
     >
+      <div className="flex justify-center px-6 pb-4">
+        <img src="/plenty-logo.svg" alt="Plenty" className="h-6 w-auto" />
+      </div>
       <ul className="flex flex-col gap-1">
         {navItems.map((item) => {
           const isActive = pathname === item.href;
