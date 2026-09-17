@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Mukta_Mahee } from "next/font/google";
 import Sidebar from "@/components/shared/Sidebar";
+import TopBar from "@/components/shared/TopBar";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -27,7 +28,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex font-sans">
         <Sidebar />
-        <div className="flex flex-1 flex-col min-w-0">{children}</div>
+        <div className="flex flex-1 flex-col min-w-0">
+          <TopBar />
+          {children}
+        </div>
       </body>
     </html>
   );
